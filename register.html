@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تسجيل حساب جديد - ASO</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0; padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      direction: rtl;
+      color: #333;
+    }
+    .container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 25px;
+      color: #3a7ca5;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      text-align: right;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      width: 100%;
+      background-color: #3a7ca5;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #2b5c7e;
+    }
+    .login-link {
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+    .login-link a {
+      color: #3a7ca5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>تسجيل حساب جديد</h2>
+    <form>
+      <label for="name">الاسم الكامل:</label>
+      <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+
+      <label for="email">البريد الإلكتروني:</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+      <label for="password">كلمة المرور:</label>
+      <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور" required>
+
+      <label for="confirm-password">تأكيد كلمة المرور:</label>
+      <input type="password" id="confirm-password" name="confirm-password" placeholder="أعد كتابة كلمة المرور" required>
+
+      <button type="submit">إنشاء حساب</button>
+    </form>
+
+    <div class="login-link">
+      <p>هل لديك حساب؟ <a href="login.html">سجّل الدخول</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
