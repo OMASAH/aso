@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> ASO </title>
+  <title>بوكسات</title>
   <style>
-    /* الخط العام */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -14,19 +13,12 @@
       color: #333;
       direction: rtl;
     }
-
     header {
       background-color: #3a7ca5;
       color: white;
       padding: 20px;
       text-align: center;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-
     nav ul {
       list-style: none;
       padding: 0;
@@ -36,34 +28,16 @@
       gap: 20px;
       flex-wrap: wrap;
     }
-
     nav ul li a {
       color: #e3f2fd;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
     }
-
-    nav ul li a:hover {
-      color: #fff;
-    }
-
     .welcome {
       text-align: center;
       padding: 50px 20px;
       background-color: #e1ecf4;
     }
-
-    .welcome h2 {
-      font-size: 1.8em;
-      margin-bottom: 15px;
-    }
-
-    .welcome p {
-      font-size: 1.1em;
-      color: #555;
-    }
-
     .btn {
       display: inline-block;
       margin-top: 20px;
@@ -72,14 +46,7 @@
       padding: 10px 25px;
       border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
     }
-
-    .btn:hover {
-      background-color: #2b5c7e;
-    }
-
     #booking {
       padding: 40px 20px;
       background-color: #fff;
@@ -89,28 +56,17 @@
       border-radius: 10px;
       margin-top: 40px;
     }
-
-    #booking h3 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #3a7ca5;
-    }
-
-    form label {
+    form label, form select, form input {
       display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    form input {
       width: 100%;
-      padding: 10px;
       margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
       font-size: 1em;
     }
-
+    form select, form input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
     form button {
       width: 100%;
       background-color: #3a7ca5;
@@ -119,14 +75,7 @@
       border: none;
       border-radius: 6px;
       font-size: 1.1em;
-      cursor: pointer;
-      transition: background 0.3s;
     }
-
-    form button:hover {
-      background-color: #2b5c7e;
-    }
-
     footer {
       background-color: #f1f1f1;
       text-align: center;
@@ -135,54 +84,275 @@
       margin-top: 50px;
     }
   </style>
+
+<script>
+function toggleExclusive(clickedId) {
+  if (clickedId === 'ribbon') {
+    document.getElementById('strings').checked = false;
+  } else if (clickedId === 'strings') {
+    document.getElementById('ribbon').checked = false;
+  }
+}
+</script>
+
 </head>
 <body>
 
-  <!-- رأس الصفحة -->
-  <header>
-    <h1>بوكسات</h1>
-    <nav>
-      <ul>
-        <li><a href="#">الرئيسية</a></li>
-        <li><a href="#">عن البوكسات</a></li>
-        <li><a href="#booking">حجز الآن</a></li>
-        <li><a href="login.html">تسجيل الدخول</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>بوكسات</h1>
+  <nav>
+    <ul>
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#">عن البوكسات</a></li>
+      <li><a href="#booking">حجز الآن</a></li>
+      <li><a href="login.php">تسجيل الدخول</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- قسم ترحيبي -->
-  <section class="welcome">
-    <h2>مرحبًا بك في موقع حجز البوكسات</h2>
-    <p>احجز البوكس المناسب لك حسب المقاس والعدد المطلوب بسهولة وسرعة.</p>
-    <a href="#booking" class="btn">ابدأ الحجز الآن</a>
-  </section>
 
-  <!-- نموذج الحجز -->
-  <!-- نموذج الحجز -->
-<!-- نموذج الحجز -->
+<section class="welcome" style="background-image: linear-gradient(to left, #f2fbff, #e9f3fa); border-bottom: 1px solid #ddd;">
+  <h2 style="color:#3a7ca5; text-align:center;">مرحبًا بك في عالم البوكسات ✨</h2>
+  <p style="font-size:1.1em; color:#444; max-width:700px; margin: 0 auto; text-align:center;">
+    هل تبحث عن لمسة تميز؟ في متجر <strong>بوكسات</strong>، نمنحك خيارات تفصيلية لتصميم صندوق الأحلام – سواءً كان لهدية، فعالية، مطعم، أو مفاجأة أنمي مبهرة. اختر من بين المقاسات، الغطاء، الزينة، وحتى القواطع الداخلية، ودعنا نعتني بالباقي!
+  </p>
+  <a href="#booking" class="btn" style="margin-top: 30px;">ابدأ تخصيص بوكسك الآن</a>
+</section>
+
+  <h2 style="text-align:center;">مرحبًا بك في موقع حجز البوكسات</h2>
+  <p style="text-align:center;">احجز البوكس المناسب لك حسب المقاس والعدد المطلوب بسهولة وسرعة.</p>
+  
+</section>
+
+
+<section id="about-boxes" style="background:#fdfbff; padding: 50px 20px; font-family: 'Segoe UI';">
+  <div style="max-width: 1100px; margin: auto;">
+    <h2 style="text-align:center; color:#3a7ca5; font-size:2.2em;">📦 عن البوكسات</h2>
+    <p style="text-align:center; font-size:1.1em; color:#444; max-width:800px; margin:auto;">
+      البوكسات ليست مجرد علبة، بل هي تجربة مغلّفة بالذوق! سواء كنت تبحث عن هدية فاخرة أو تغليف أنيق لمنتجاتك، فإن اختيار البوكس المناسب يعكس إحساسك بالتفاصيل وجودة التقديم.
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+      <div style="flex: 1 1 250px; background:white; border-radius:15px; box-shadow:0 0 10px rgba(0,0,0,0.05); padding:20px; text-align:center;">
+        <img src="https://i.imgur.com/uHDrZnQ.png" alt="بوكس احترافي" style="width:100%; border-radius:10px;">
+        <h4 style="margin:15px 0 5px;">بوكسات الفعاليات</h4>
+        <p style="font-size:0.95em;">للحفلات والمناسبات بألوان جذابة وتصاميم مرتبطة بطابع الفعالية مثل الأعياد، التخرج، أو المناسبات العائلية.</p>
+      </div>
+      <div style="flex: 1 1 250px; background:white; border-radius:15px; box-shadow:0 0 10px rgba(0,0,0,0.05); padding:20px; text-align:center;">
+        <img src="https://i.imgur.com/Pr0z7kr.png" onerror="this.src='https://via.placeholder.com/300x200?text=Box+2'" alt="بوكس أنمي" style="width:100%; border-radius:10px;">
+        <h4 style="margin:15px 0 5px;">بوكسات الأنمي</h4>
+        <p style="font-size:0.95em;">تصاميم شبابية مستوحاة من عالم الأنمي، مع لواصق مميزة داخل البوكس.</p>
+      </div>
+      <div style="flex: 1 1 250px; background:white; border-radius:15px; box-shadow:0 0 10px rgba(0,0,0,0.05); padding:20px; text-align:center;">
+        <img src="https://i.imgur.com/Qb89LzE.png" alt="بوكس كلاسيكي" style="width:100%; border-radius:10px;">
+        <h4 style="margin:15px 0 5px;">بوكسات الهدايا الفاخرة</h4>
+        <p style="font-size:0.95em;">شكل أنيق، خيوط ذهبية، وتغليف راقٍ يُبهر المستقبل.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="live-preview" style="padding: 60px 20px; background: #f9fbfc;">
+  <h2 style="text-align:center; color:#3a7ca5;">🎨 معاينة فورية للبوكس</h2>
+  <p style="text-align:center; margin-bottom:30px;">شاهد شكل البوكس الخاص بك حسب الخيارات المحددة قبل الطلب.</p>
+  <div id="preview-box" style="width: 250px; height: 180px; margin: 0 auto; background: #fff; border: 2px solid #aaa; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.5s ease; position: relative;">
+    <div id="cover" style="width: 100%; height: 30px; background: #ddd; border-top-left-radius: 10px; border-top-right-radius: 10px;"></div>
+    <div id="ribbon-preview" style="position: absolute; top: 50%; left: 50%; width: 60px; height: 10px; background: #c93; border-radius: 5px; transform: translate(-50%, -50%); display:none;"></div>
+    <div id="strings-preview" style="position: absolute; bottom: 10px; left: 50%; width: 60px; height: 10px; background: #397; border-radius: 5px; transform: translateX(-50%); display:none;"></div>
+  </div>
+</section>
+
+<script>
+function updatePreview() {
+  const cover = document.getElementById('cover');
+  const ribbon = document.getElementById('ribbon-preview');
+  const strings = document.getElementById('strings-preview');
+  const transparency = document.querySelector('input[name="cover_transparency"]:checked');
+  const ribbonBox = document.getElementById('ribbon').checked;
+  const stringsBox = document.getElementById('strings').checked;
+
+  if (transparency && transparency.value === 'شفاف') {
+    cover.style.background = 'rgba(200,200,255,0.4)';
+  } else {
+    cover.style.background = '#ccc';
+  }
+
+  ribbon.style.display = ribbonBox ? 'block' : 'none';
+  strings.style.display = stringsBox ? 'block' : 'none';
+}
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('change', updatePreview);
+  });
+});
+</script>
+
 <section id="booking">
   <h3>نموذج حجز البوكس</h3>
-  <form>
+  <form action="submit_booking.php" method="POST" onsubmit="alert('✅ تم إرسال الحجز! سيتم تحويلك الآن...');">
     <label for="length">مقاس الطول (سم):</label>
-    <input type="number" id="length" name="length" placeholder="مثال: 40" required>
+    <input type="number" id="length" name="length" required>
 
     <label for="width">مقاس العرض (سم):</label>
-    <input type="number" id="width" name="width" placeholder="مثال: 50" required>
+    <input type="number" id="width" name="width" required>
 
-    <label for="depth">مقاس العمق (سم):</label>
-    <input type="number" id="depth" name="depth" placeholder="مثال: 10" required>
+    <label for="depth">مقاس العمق (الارتفاع) (سم):</label>
+    <input type="number" id="depth" name="depth" required>
 
     <label for="quantity">عدد البوكسات:</label>
-    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+    <input type="number" id="quantity" name="quantity" min="1" required>
+
+    <label for="box_type">نوع البوكس:</label>
+    <select id="box_type" name="box_type" required>
+      <option value="">-- اختر نوع البوكس --</option>
+      <option value="متصل">بوكس متصل</option>
+      <option value="غطاء منفصل">بوكس بغطاء منفصل</option>
+    </select>
+
+    <label for="transparent">هل البوكس شفاف؟</label>
+    <select id="transparent" name="transparent" required>
+      <option value="">-- اختر --</option>
+      <option value="شفاف">نعم، يحتوي على قطعة شفافة</option>
+      <option value="بدون شفاف">لا، بدون أي قطعة شفافة</option>
+    </select>
+
+    <label for="decoration">هل ترغب بخيوط أو شريطة؟</label>
+    <select id="decoration" name="decoration" required>
+      <option value="">-- اختر --</option>
+      <option value="مع">مع</option>
+      <option value="بدون">بدون</option>
+    </select>
+
+    <label for="has_dividers">هل تريد قواطع داخل البوكس؟</label>
+    <select id="has_dividers" name="has_dividers" onchange="toggleDividerInput()" required>
+      <option value="">-- اختر --</option>
+      <option value="نعم">نعم</option>
+      <option value="لا">لا</option>
+    </select>
+
+    <div id="dividerCountField" style="display: none;">
+      <label for="divider_count">كم عدد المربعات (القواطع)؟</label>
+      <input type="number" id="divider_count" name="divider_count" min="1">
+    </div>
 
     <button type="submit">إرسال الحجز</button>
   </form>
-</section>
-
-  <!-- تذييل -->
-  <footer>
-    <p>جميع الحقوق محفوظة &copy; 2025</p>
-  </footer>
+</section
+<footer style="background: #1e1e2f; color: #ccc; text-align: center; padding: 40px 20px; font-size: 0.95em; margin-top: 80px;">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="margin-bottom: 20px;">
+      <a href="https://wa.me/XXXXXXXXXX" target="_blank" style="margin: 0 10px; text-decoration: none; color: #ccc;">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" style="width:24px; vertical-align: middle;"> واتساب
+      </a>
+      <a href="https://www.instagram.com/YOUR_PAGE" target="_blank" style="margin: 0 10px; text-decoration: none; color: #ccc;">
+        <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" style="width:24px; vertical-align: middle;"> انستغرام
+      </a>
+      <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" style="margin: 0 10px; text-decoration: none; color: #ccc;">
+        <img src="https://img.icons8.com/color/48/000000/facebook.png" style="width:24px; vertical-align: middle;"> فيسبوك
+      </a>
+    </div>
+    <p style="margin-top: 10px; color: #999;">جميع الحقوق محفوظة &copy; 2025 بوكساتي</p>
+  </div>
+</footer>
 </body>
+</html> html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بوكسات</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+      direction: rtl;
+    }
+    header {
+      background-color: #3a7ca5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      color: #e3f2fd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .welcome {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #e1ecf4;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #3a7ca5;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    #booking {
+      padding: 40px 20px;
+      background-color: #fff;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+    form label, form select, form input {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+    form select, form input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      width: 100%;
+      background-color: #3a7ca5;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+    }
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+  </style>
+
+<script>
+function toggleExclusive(clickedId) {
+  if (clickedId === 'ribbon') {
+    document.getElementById('strings').checked = false;
+  } else if (clickedId === 'strings') {
+    document.getElementById('ribbon').checked = false;
+  }
+}
+</script>
+
+</head>
+
 </html>
